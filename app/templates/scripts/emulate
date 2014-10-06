@@ -1,0 +1,7 @@
+#!/bin/bash
+
+DIR=$(dirname $0)
+
+. $DIR/build
+ionic emulate ios
+tail -f platforms/ios/cordova/console.log

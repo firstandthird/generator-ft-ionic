@@ -1,0 +1,5 @@
+node_modules/
+.idea/
+ui/lib
+.DS_Store
+.vimlocal

@@ -1,0 +1,18 @@
+<ion-nav-view name="main-area"></ion-nav-view>
+
+<div class="tabs-icon-top tabs-stable tabs--<%= name.toLowerCase() %>" keyboard-attach>
+  <div class="tabs">
+    <a class="tab-item" ng-class="{ 'tab-item-active' : activeTab === 0 }" ui-sref="tab.first">
+      <i class="icon ion-heart"></i>
+      <span class="tab-title">First Tab</span>
+    </a>
+    <a class="tab-item" ng-class="{ 'tab-item-active' : activeTab === 1 }" ui-sref="tab.second">
+      <i class="icon ion-chatbubble-working"></i>
+      <span class="tab-title">Second Tab</span>
+    </a>
+    <a class="tab-item" ng-class="{ 'tab-item-active' : activeTab === 2 }" ui-sref="tab.third">
+      <i class="icon ion-image"></i>
+      <span class="tab-title">Third</span>
+    </a>
+  </div>
+</div>

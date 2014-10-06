@@ -1,0 +1,12 @@
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: $font-family-medium;
+  font-weight:500;
+  font-stretch:normal;
+  background: #FFF;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}

@@ -1,0 +1,26 @@
+{
+  "name": "generator-ft-ionic",
+  "version": "0.1.0",
+  "description": "First + Third Ionic & Cordova Generator",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "firstandthird/generator-ft-ionic",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "chalk": "^0.5.0",
+    "extfs": "0.0.7",
+    "yeoman-generator": "^0.17.0",
+    "yosay": "^0.3.0"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0"
+  }
+}
