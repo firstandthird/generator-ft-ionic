@@ -3,16 +3,6 @@ jshint:
     src:
       - '<%= ui %>js/**/*.js'
       - '<%= ui %>modules/**/*.js'
-ngtemplates:
-  cwd: '<%= ui %>modules/'
-  src:
-    - '**/*.html'
-  dest: '<%= dist %>js/<%= package.name %>.module.templates.js'
-ngtemplates__templates:
-  cwd: '<%= ui %>'
-  src:
-    - 'templates/*.html'
-  dest: '<%= dist %>js/<%= package.name %>.templates.templates.js'
 bower:
   dest: '<%= dist %>js/<%= package.name %>.bower.js'
   exclude:
@@ -20,10 +10,10 @@ bower:
     - 'ionic'
 concat:
   src:
-    - '<%= ui %>lib/jquery/dist/jquery.js'
-    - '<%= ui %>lib/ionic/release/js/ionic.js'
+    - 'bower_components/jquery/dist/jquery.js'
+    - 'bower_components/ionic/release/js/ionic.js'
     - '<%= dist %>js/<%= package.name %>.bower.js'
-    - '<%= ui %>lib/ionic/release/js/ionic-angular.js'
+    - 'bower_components/ionic/release/js/ionic-angular.js'
     - '<%= dist %>js/<%= package.name %>.angular.js'
     - '<%= dist %>js/<%= package.name %>.module.templates.js'
     - '<%= dist %>js/<%= package.name %>.templates.templates.js'
@@ -48,12 +38,4 @@ watch:
   tasks:
     - 'jshint'
     - 'ngAnnotate'
-    - 'concat'
-watch__templates:
-  files:
-    src:
-      - '<%= ui %>modules/**.html'
-      - '<%= ui %>templates/**.html'
-  tasks:
-    - 'ngtemplates'
     - 'concat'

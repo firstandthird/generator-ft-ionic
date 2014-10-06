@@ -160,11 +160,11 @@ var FtIonicGenerator = yeoman.generators.Base.extend({
     var onExit = function (status) {
       if (status !== 0) {
         error = true;
-        self.log('Something went wrong');
+        self.log('Something went wrong installing plugins, you will have to check this later!');
       }
       completed++;
 
-      if (completed === self.plugins.length && !error) {
+      if (completed === self.plugins.length) {
         done();
       }
     };
@@ -175,9 +175,11 @@ var FtIonicGenerator = yeoman.generators.Base.extend({
   },
   writing: {
     app: function () {
+      fs.removeSync('./www/index.html');
       this.template('_bower.json', 'bower.json', this);
       this.template('_package.json', 'package.json', this);
-      this.src.copy('Gruntfile.js', 'Gruntfile.json');
+      this.template('www/_index.html', 'www/index.html');
+      this.src.copy('Gruntfile.js', 'Gruntfile.js');
 
       this.dest.mkdir('platform-merge');
     },
@@ -197,13 +199,13 @@ var FtIonicGenerator = yeoman.generators.Base.extend({
     },
 
     grunt: function () {
-      this.src.copy('grunt', 'grunt');
+      this.dest.mkdir('grunt');
+      this.directory('grunt', 'grunt');
     },
 
     projectfiles: function () {
       this.src.copy('gitignore', '.gitignore');
       this.src.copy('platformsgitignore', 'platforms/.gitignore');
-      this.src.copy('bowerrc', '.bowerrc');
       this.src.copy('jshintrc', '.jshintrc');
       this.directory('hooks', 'hooks');
     },

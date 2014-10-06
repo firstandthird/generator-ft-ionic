@@ -1,0 +1,18 @@
+watch:
+  files:
+    src:
+      - '<%= ui %>modules/**.html'
+      - '<%= ui %>templates/**.html'
+  tasks:
+    - 'ngtemplates'
+    - 'concat'
+ngtemplates:
+  cwd: '<%= ui %>'
+  src:
+    - 'templates/*.html'
+  dest: '<%= dist %>js/<%= package.name %>.templates.templates.js'
+ngtemplates__modules:
+  cwd: '<%= ui %>modules/'
+  src:
+    - '**/*.html'
+  dest: '<%= dist %>js/<%= package.name %>.module.templates.js'

@@ -20,7 +20,7 @@ $ionicons-font-path: "../fonts" !default;
 @import "vars";
 
 // Include all of Ionic
-@import "../lib/ionic/scss/ionic";
+@import "../../bower_components/ionic/scss/ionic";
 
 @import "base";
 @import "overwrites";

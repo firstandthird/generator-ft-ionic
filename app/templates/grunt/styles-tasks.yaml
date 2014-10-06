@@ -1,0 +1,12 @@
+sass:
+  options:
+    style: 'expanded'
+  files:
+    '<%= dist %>css/<%= package.name %>.css' : '<%= ui %>scss/project.scss'
+watch:
+  files:
+    src:
+      - '<%= ui %>scss/**/*.scss
+      - '<%= ui %>modules/**/*.scss
+  tasks:
+    - 'sass'

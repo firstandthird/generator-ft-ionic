@@ -1,0 +1,5 @@
+ionicons:
+  expand: true
+  cwd: 'bower_components/ionicons/'
+  src: 'fonts/*'
+  dest: 'www/'
