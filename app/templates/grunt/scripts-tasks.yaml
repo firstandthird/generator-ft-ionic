@@ -1,3 +1,8 @@
+aliases:
+  - 'jshint'
+  - 'bower'
+  - 'ngAnnotate'
+  - 'concat'
 jshint:
   files:
     src:
@@ -17,7 +22,7 @@ concat:
     - '<%= dist %>js/<%= package.name %>.angular.js'
     - '<%= dist %>js/<%= package.name %>.module.templates.js'
     - '<%= dist %>js/<%= package.name %>.templates.templates.js'
-  dest: '<%= ui %>js/<%= package.name %>.js'
+  dest: '<%= dist %>js/<%= package.name %>.js'
 ngAnnotate:
   options:
     remove: true
@@ -39,3 +44,6 @@ watch:
     - 'jshint'
     - 'ngAnnotate'
     - 'concat'
+clean:
+  - '<%= dist %>js/<%= package.name %>.bower.js'
+  - '<%= dist %>js/<%= package.name %>.angular.js'

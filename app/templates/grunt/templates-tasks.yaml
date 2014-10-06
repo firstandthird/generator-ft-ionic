@@ -1,3 +1,5 @@
+aliases:
+  - 'ngtemplates'
 watch:
   files:
     src:
@@ -16,3 +18,6 @@ ngtemplates__modules:
   src:
     - '**/*.html'
   dest: '<%= dist %>js/<%= package.name %>.module.templates.js'
+clean:
+  - '<%= dist %>js/<%= package.name %>.module.templates.js'
+  - '<%= dist %>js/<%= package.name %>.templates.templates.js'
